@@ -48,8 +48,8 @@ cursor.execute("""
 CREATE TABLE IF NOT EXISTS crime_reports (
                dr_no INTEGER PRIMARY KEY,
                date_reported TEXT,
-               date_occured TEXT,
-               time_occured INTEGER,
+               date_occurred TEXT,
+               time_occurred INTEGER,
                area INTEGER,
                area_name TEXT,
                rpt_dist_no INTEGER,

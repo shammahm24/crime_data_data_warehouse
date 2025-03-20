@@ -12,7 +12,7 @@ for _, row in df[['LOCATION', 'LAT', 'LON']].drop_duplicates().iterrows():
                    (row['LOCATION'], row['LAT'], row['LON']))
     
 # insert unique victims
-for _, row in df[['Vict Age', 'Vict Sex', 'Vict Descent']].drop_duplicates().iterrows:
+for _, row in df[['Vict Age', 'Vict Sex', 'Vict Descent']].drop_duplicates().iterrows():
     cursor.execute("INSERT OR IGNORE INTO victims (age, sex, descent) VALUES (?, ?, ?)",
                    (row['Vict Age'], row['Vict Sex'], row['Vict Descent']))
     
@@ -48,7 +48,8 @@ for _, row in df.iterrows():
     crime_code = cursor.fetchone()[0]
 
     cursor.execute("SELECT weapon_id FROM weapons WHERE weapon_code = ?", (row['Weapon Used Cd'],))
-    weapon_id = cursor.fetchone()[0] if cursor.fetchone() else None
+    result = cursor.fetchone()
+    weapon_id = result[0] if result else None
 
     cursor.execute("SELECT status_id FROM statuses WHERE status = ?", (row['Status'],))
     status_id = cursor.fetchone()[0]
