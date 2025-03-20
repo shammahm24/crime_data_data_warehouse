@@ -3,7 +3,7 @@ Python + Sqlite data warehouse for California crime data
 
 # Data Pipeline and ETL
 ## Extraction
-Extract data from California crime data set from https://data.gov
+Extract data from California crime data set from https://catalog.data.gov/dataset/crime-data-from-2020-to-present
 
 ## Transformation
 Create normalized data base
