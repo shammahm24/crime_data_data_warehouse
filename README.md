@@ -49,6 +49,7 @@ Database of choice for this project is SQLite for the following reasons:
 # Project Expansion
 ## Full Scale Data Warehouse Design
 ![](https://github.com/shammahm24/crime_data_data_warehouse/blob/main/AWS%20Data%20Warehouse.drawio.png)
+
 ## Next Steps
 1. Build Quiries and reports 
 2. API for data access via Cloud or self hosted VPS
