@@ -3,7 +3,7 @@ import sqlite3
 conn = sqlite3.connect("normalized_crime_data.db")
 cursor = conn.cursor()
 
-cursor.execute(""""
+cursor.execute("""
 CREATE TABLE IF NOT EXISTS locations (
                location_id INTEGER PRIMARY KEY AUTOINCREMENT,
                location TEXT UNIQUE,
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS locations (
 );
 """)
 
-cursor.execute(""""
+cursor.execute("""
 CREATE TABLE IF NOT EXISTS victims (
                victim_id INTEGER PRIMARY KEY AUTOINCREMENT,
                age INTEGER,
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS crime_codes (
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS weapons (
                weapon_id INTEGER PRIMARY KEY AUTOINCREMENT,
-               weapon_code INTEGER UNIQUE
+               weapon_code INTEGER UNIQUE,
                description TEXT
 );
 """)
