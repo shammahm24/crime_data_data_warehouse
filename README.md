@@ -50,6 +50,13 @@ Database of choice for this project is SQLite for the following reasons:
 ## Full Scale Data Warehouse Design
 ![](https://github.com/shammahm24/crime_data_data_warehouse/blob/main/AWS%20Data%20Warehouse.drawio.png)
 
+*S3* - Stores raw CSV files and SQLite databases and triggers lambda when files are added
+*Lambda* - Data processing and ETL. Extract data from CSV files, normalise and transform data
+then send to RDS or other structured SQLite databases.
+*Athena* - Query structured data directly from S3
+*Quick Sight* - Data visualization and reporting (preference based)
+*API Gateway* - Provide data access via APIs
+
 ## Next Steps
 1. Build Quiries and reports 
 2. API for data access via Cloud or self hosted VPS
